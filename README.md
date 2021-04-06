@@ -1,7 +1,7 @@
 # Visual Programming Homework
 
-(download as exe)[]
+[download as exe]()
 
 ## Images
 
-!(image1)[https://i.hizliresim.com/XmaBMT.png]
+![image1](https://i.hizliresim.com/XmaBMT.png)
