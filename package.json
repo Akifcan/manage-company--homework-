@@ -1,0 +1,28 @@
+{
+  "name": "manage-company",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.3.0",
+    "electron-builder": "^22.10.5"
+  },
+   "build": {
+    "appId": "com.seaapi.managecompany",
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "managecompany.exe"
+    }
+  },
+  "dependencies": {}
+}

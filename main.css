@@ -1,0 +1,458 @@
+:root {
+  --color-blue: #006994;
+  --font-bebas-neue: "Bebas Neue", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* global */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-logo {
+  text-align: center;
+  font-family: var(--font-bebas-neue);
+  font-size: 5rem;
+}
+
+button {
+  cursor: crosshair;
+  background-color: var(--color-blue);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* start view */
+
+.start p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.flags {
+  margin: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.flag {
+  cursor: pointer;
+}
+
+/* introduce */
+
+.wizard {
+  clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+  background-color: white;
+  align-items: flex-start;
+  height: auto;
+  border: 1px solid var(--color-blue);
+  padding: 1rem 0 6rem 1rem;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wizard.one,
+.wizard.two,
+.wizard .three {
+  display: none;
+}
+
+.wizard input {
+  width: 15rem;
+  padding: 0.5rem;
+}
+
+.wizard form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose-gender {
+  align-items: center;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+}
+
+.gender {
+  cursor: pointer;
+  transition: transform 250ms linear;
+}
+.gender.selected {
+  padding: 0.2rem;
+  border: 1px solid var(--color-blue);
+}
+
+.gender:hover,
+.gender:focus {
+  transform: scale(1.2);
+}
+
+#change-language {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Game View */
+
+.game {
+  display: grid;
+  place-items: center;
+  height: 98vh;
+}
+
+.arrows {
+  z-index: 2;
+  padding: 0 2rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.arrows img {
+  cursor: pointer;
+}
+
+.room {
+  display: none;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.game .profile {
+  z-index: 2;
+  top: 15%;
+  left: 5%;
+  position: absolute;
+}
+
+.profile::before {
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: transform 250ms linear;
+  position: absolute;
+  text-transform: capitalize;
+  content: attr(name);
+  padding: 0.5rem;
+  color: white;
+  top: -70%;
+  border-radius: 0.5rem;
+  background-color: var(--color-blue);
+}
+
+.profile:hover::before {
+  transform: scale(1);
+}
+
+.modal.active {
+  visibility: visible;
+  pointer-events: initial;
+  user-select: initial;
+}
+
+.profile-modal {
+  position: absolute;
+  display: none;
+  gap: 2rem;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.resignation {
+  background: crimson !important;
+  margin: 1rem 0;
+}
+
+.academic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.github {
+  background: #333;
+}
+
+.employees {
+  position: absolute;
+  z-index: 5;
+}
+
+.actions {
+  position: absolute;
+  z-index: 5;
+  bottom: 20%;
+  left: 5%;
+}
+.active {
+  display: flex;
+}
+.team-modal {
+  padding: 0.3rem;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  position: absolute;
+  overflow-y: scroll;
+  height: 25rem;
+  width: 25rem;
+  background: whitesmoke;
+}
+.team-modal .team {
+  flex: 1;
+  border-right: 2px solid var(--color-blue);
+}
+.action {
+  cursor: pointer;
+}
+
+.team li {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.team ul {
+  line-height: 2rem;
+}
+
+.bar {
+  display: flex;
+  gap: 0.5rem;
+  border-left: 5px solid var(--color-blue);
+  padding: 0.5rem;
+  width: 70%;
+  position: absolute;
+  right: 0;
+  top: 15%;
+}
+
+.bar-item {
+  z-index: 5;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.bar-item::before {
+  transition: transform 250ms ease-in;
+  transform-origin: bottom center;
+  transform: scale(0);
+  top: -90%;
+  position: absolute;
+  content: attr(title);
+  padding: 0.3rem;
+  color: white;
+  border-radius: 0.5rem;
+  left: 0;
+  width: 100%;
+  background: var(--color-blue);
+}
+
+.bar-item:hover::before {
+  transform: scale(1);
+}
+
+.progress {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-blue);
+  height: 15px;
+  width: 100%;
+}
+
+.progress .status {
+  position: absolute;
+  border-radius: 0.5rem;
+  left: 0;
+  top: 1px;
+  height: 0.7rem;
+  background-color: var(--color-blue);
+}
+
+.date {
+  position: absolute;
+  padding: 0.4rem;
+  z-index: 5;
+  bottom: 20%;
+  right: 5%;
+}
+
+.fun-modal,
+.meeting-modal,
+.random-action-modal,
+.action-result-modal
+ {
+  pointer-events: none;
+  user-select: none;
+  visibility: hidden;
+  background: whitesmoke;
+  max-height: 20rem;
+  width: 90%;
+  padding: 1rem;
+  overflow-y: scroll;
+  z-index: 5;
+  border-radius: 0.4rem;
+}
+
+.random-action-modal{
+  text-transform: capitalize;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 25rem;
+  align-items: center;
+}
+
+.action-result-modal{
+  gap: 5rem;
+  align-items: center;
+}
+
+.action-result-modal .texts{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meeting-modal, .random-action-modal, .action-result-modal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fun-modal,
+.meeting-modal{
+  flex-direction: column;
+}
+
+.modal ul {
+  text-transform: capitalize;
+  list-style: none;
+  line-height: 2rem;
+}
+
+.modal ul li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.email-modal{
+  text-transform: capitalize;
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  color: white;
+  height: 98vh;
+  width: 100%;
+  background: var(--color-blue);
+  z-index: 10;
+}
+
+.email-modal.active{
+  visibility: visible;
+  pointer-events: initial;
+  user-select: initial;
+}
+
+.email-modal .mail-list{
+  flex: 1;
+}
+
+.email-modal .mail-detail{
+  flex: 2;
+  background: whitesmoke;
+}
+
+.mail-list{
+  overflow-y: scroll;
+  padding: 1rem 0;
+}
+
+.mail-list .mail{
+  cursor: pointer;
+  padding: .5rem;
+}
+
+.mail-list .mail:hover{
+  background: whitesmoke;
+  color: black;
+  border-right: 2px solid var(--color-blue);
+}
+
+.mail-list .mail:hover .read{
+  background: var(--color-blue);
+  color: white;
+}
+
+.mail-list .mail > * {
+  margin: 1rem 0;
+}
+
+.mail-detail{
+  padding: .5rem;
+  color: black;
+}
+
+.mail-detail p{
+  margin-top: 1rem;
+}
+
+.read{
+  background: whitesmoke;
+  color: black;
+  width: 100%;
+}
