@@ -4,9 +4,9 @@
 
 ## Images
 
-![image](https://i.hizliresim.com/XmaBMT.png)
-![image1](https://i.hizliresim.com/XmaBMT.png)
-![image2](https://i.hizliresim.com/fP8sQL.png)
+
+![image1](https://i.imgur.com/jmg1b7k.png)
+![image2](https://i.imgur.com/gBNYDRt.png)
 ![image3](https://i.hizliresim.com/hhnTlf.png)
 ![image4](https://i.hizliresim.com/4XvIN6.png)
 ![image5](https://i.hizliresim.com/fnvApT.png)
