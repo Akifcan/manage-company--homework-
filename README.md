@@ -7,9 +7,9 @@
 
 ![image1](https://i.imgur.com/jmg1b7k.png)
 ![image2](https://i.imgur.com/gBNYDRt.png)
-![image3](https://i.hizliresim.com/hhnTlf.png)
-![image4](https://i.hizliresim.com/4XvIN6.png)
-![image5](https://i.hizliresim.com/fnvApT.png)
-![image5](https://i.hizliresim.com/fnvApT.png)
-![image6](https://i.hizliresim.com/UCPynK.png)
+![image3](https://i.imgur.com/SXoiCAX.png)
+![image4](https://i.imgur.com/QCX12Su.png)
+![image5](https://i.imgur.com/MjKPIjx.png)
+![image5](https://i.imgur.com/vBPqpVR.png)
+
 
